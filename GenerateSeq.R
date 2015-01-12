@@ -25,12 +25,13 @@ generateSeq = function(destSeq="TOBEORNOTTOBE",Niter=5000)
         seq[x] <<- randomOne()
       })
     }
-    timesSet[Niter] = times
+    timesSet[i] = times
     setTxtProgressBar(pb = pb,value = i)
   }
   cat("\n")
   averageTimes = mean(timesSet)
-  cat("Average times:",averageTimes,"\n")
+  sdTimes = sd(timesSet)
+  cat("Average times:",averageTimes," (",sdTimes,")\n")
   return(averageTimes)
 }
 generateSeq()
