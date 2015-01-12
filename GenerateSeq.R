@@ -4,7 +4,7 @@ randomOne = function()
            "I","J","K","L","M","N","O","P",
            "Q","R","S","T","U","V","W","X",
            "Y","Z")
-  return(repo[sample(1:26,size = 1)])
+  return(sample(repo,size = 1))
 }
 
 generateSeq = function(destSeq="TOBEORNOTTOBE",Niter=5000)
